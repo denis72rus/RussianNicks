@@ -34,8 +34,8 @@ bool checkNickname(char *name)
 			*name >= 'A' && *name <= 'Z' ||
 			*name >= 'a' && *name <= 'z' ||
 
-			*name >= 'À' && *name <= 'ß' || // Added by
-			*name >= 'à' && *name <= 'ÿ' || //           Roman1us
+			*name >= 'À' && *name <= 'ß' ||
+			*name >= 'à' && *name <= 'ÿ' ||
 
 			*name == ']' ||
 			*name == '[' ||

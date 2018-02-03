@@ -1,4 +1,4 @@
-LIBRARY "allow_nicknames"
+LIBRARY "allow_any_nicks"
 EXPORTS
 	Supports
 	Load

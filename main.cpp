@@ -95,22 +95,22 @@ PLUGIN_EXPORT bool PLUGIN_CALL Load(void **ppData)
 {
 	pAMXFunctions = ppData[PLUGIN_DATA_AMX_EXPORTS];
 	logprintf = (logprintf_t)ppData[PLUGIN_DATA_LOGPRINTF];
-	logprintf("  [allow_nicknames]: Plugin for 0.3.DL-R1");
+	logprintf("  [allow_any_nicks]: Plugin for 0.3.DL-R1");
 	if (memcmp((void*)CINC_Addr, (void*)CINC_Signature, 16) != 0)
 	{
-		logprintf("  [allow_nicknames]: Invalid signature");
+		logprintf("  [allow_any_nicks]: Invalid signature");
 		return 0;
 	}
 	InstallJmpHook(CINC_Addr, (DWORD)checkNickname);
 	*(DWORD *)GPN_Intable = (DWORD)GetPlayerName;
 
-	logprintf("  [allow_nicknames]: Unlock memory and enabled");
+	logprintf("  [allow_any_nicks]: Unlock memory and enabled");
 	return 1;
 }
 
 PLUGIN_EXPORT void PLUGIN_CALL Unload()
 {
-	logprintf("  [allow_nicknames]: Plugin was unloaded");
+	logprintf("  [allow_any_nicks]: Plugin was unloaded");
 }
 
 PLUGIN_EXPORT unsigned int PLUGIN_CALL Supports()
